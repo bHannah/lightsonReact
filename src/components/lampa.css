@@ -1,0 +1,13 @@
+.lekapcsolva{
+    aspect-ratio: 1;
+    border-radius: 100%;
+    border: 1px solid brown;
+    background-color: #ffdee9;
+}
+
+.felkapcsolva{
+    aspect-ratio: 1;
+    border-radius: 100%;
+    border: 1px solid brown;
+    background-color: rgb(255, 59, 117);
+}
