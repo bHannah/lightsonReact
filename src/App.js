@@ -1,19 +1,10 @@
 import './App.css';
 import Lampak from './components/Lampak';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { KattContext } from './context/KattContext';
 
 function App() {
-  const [lista, setLista]=useState([false,false,false,false,false,false,false,false,false])
-  function katt(adat){
-    const slista=[...lista]
-    if(slista[adat]==true){
-      slista[adat]=false
-    }else{
-      slista[adat]=true
-    }
-    setLista([...slista])
-    console.log(lista)
-  }
+  const {lista} = useContext(KattContext)
   //Lista feltoltese
 
   return (
@@ -22,7 +13,7 @@ function App() {
         <h1>Lights On</h1>
       </header>
       <article>
-        <Lampak lista={lista} katt={katt}/>
+        <Lampak lista={lista}/>
       </article>
       <footer>Both Sella</footer>
     </div>
